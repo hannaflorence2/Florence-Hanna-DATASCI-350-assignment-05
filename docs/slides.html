@@ -175,7 +175,7 @@ Hanna Florence
 </section>
 <section id="quick-eda" class="slide level2 smaller scrollable">
 <h2>Quick EDA</h2>
-<p>import pandas as pd df = pd.read_csv(“wdi.csv”) df[[“gdp_per_capita”,“life_expectancy”,“unemployment_rate”]].describe()</p>
+<p>#| echo: false import pandas as pd df = pd.read_csv(“wdi.csv”) df[[“gdp_per_capita”,“life_expectancy”,“unemployment_rate”]].describe()</p>
 <p>import matplotlib.pyplot as plt plot_df = df[[“gdp_per_capita”, “life_expectancy”]].dropna()</p>
 <p>plt.figure() plt.scatter(plot_df[“gdp_per_capita”], plot_df[“life_expectancy”]) plt.title(“GDP per capita vs Life Expectancy (2022)”) plt.xlabel(“GDP per capita (current US$)”) plt.ylabel(“Life expectancy (years)”) plt.tight_layout() plt.show()</p>
 <p>top10 = df[[“country”, “gdp_per_capita”]].dropna().sort_values(“gdp_per_capita”, ascending=False).head(10)</p>

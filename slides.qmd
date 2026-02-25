@@ -11,6 +11,7 @@ execute:
   echo: false
   warning: false
   message: false
+jupyter: python3
 bibliography: references.bib
 ---
 
@@ -27,6 +28,7 @@ Source: World Bank WDI [@worldbank_wdi].
 ## Quick EDA
 
 ```{python}
+#| echo: false
 import pandas as pd
 df = pd.read_csv("wdi.csv")
 df[["gdp_per_capita","life_expectancy","unemployment_rate"]].describe()

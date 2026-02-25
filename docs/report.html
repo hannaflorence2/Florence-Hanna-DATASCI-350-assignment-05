@@ -109,7 +109,7 @@ div.csl-indent {
 <section id="data" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="data"><span class="header-section-number">1</span> Data</h2>
 <p>Source: World Bank World Development Indicators (WDI) <span class="citation" data-cites="worldbank_wdi">(<a href="#ref-worldbank_wdi" role="doc-biblioref">World Bank 2022</a>)</span>. Data was retrieved using the World Bank API workflow consistent with the <code>wbgapi</code> package <span class="citation" data-cites="wbgapi">(<a href="#ref-wbgapi" role="doc-biblioref">Contributors 2024</a>)</span>.</p>
-<p>import pandas as pd df = pd.read_csv(“wdi.csv”) df.head()</p>
+<p>#| echo: false import pandas as pd df = pd.read_csv(“wdi.csv”) df.head()</p>
 <p>df.shape df[“gdp_per_capita”].describe() df[“life_expectancy”].describe() df[“unemployment_rate”].describe()</p>
 <p>import matplotlib.pyplot as plt</p>
 <p>plot_df = df[[“gdp_per_capita”, “life_expectancy”]].dropna()</p>

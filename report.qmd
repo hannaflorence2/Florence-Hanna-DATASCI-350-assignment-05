@@ -13,6 +13,7 @@ execute:
   echo: false
   warning: false
   message: false
+jupyter: python3
 bibliography: references.bib
 ---
 ## Data
@@ -21,6 +22,7 @@ Source: World Bank World Development Indicators (WDI) [@worldbank_wdi].
 Data was retrieved using the World Bank API workflow consistent with the `wbgapi` package [@wbgapi].
 
 ```{python}
+#| echo: false
 import pandas as pd
 df = pd.read_csv("wdi.csv")
 df.head()
