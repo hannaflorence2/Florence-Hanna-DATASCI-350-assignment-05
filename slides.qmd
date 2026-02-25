@@ -1,0 +1,54 @@
+---
+title: "WDI 2022: Key Findings"
+author: "Hanna Florence"
+date: "2026-02-25"
+format:
+  revealjs:
+    theme: [default, serif]
+    transition: slide
+    slide-number: true
+execute:
+  echo: false
+  warning: false
+  message: false
+bibliography: references.bib
+---
+
+## Overview
+
+- Dataset: WDI 2022 sample (countries × indicators)
+- Focus indicators:
+  - GDP per capita
+  - Life expectancy
+  - Unemployment rate
+
+Source: World Bank WDI [@worldbank_wdi].
+
+## Quick EDA
+
+```{python}
+import pandas as pd
+df = pd.read_csv("wdi.csv")
+df[["gdp_per_capita","life_expectancy","unemployment_rate"]].describe()
+
+import matplotlib.pyplot as plt
+plot_df = df[["gdp_per_capita", "life_expectancy"]].dropna()
+
+plt.figure()
+plt.scatter(plot_df["gdp_per_capita"], plot_df["life_expectancy"])
+plt.title("GDP per capita vs Life Expectancy (2022)")
+plt.xlabel("GDP per capita (current US$)")
+plt.ylabel("Life expectancy (years)")
+plt.tight_layout()
+plt.show()
+
+top10 = df[["country", "gdp_per_capita"]].dropna().sort_values("gdp_per_capita", ascending=False).head(10)
+
+plt.figure()
+plt.bar(top10["country"], top10["gdp_per_capita"])
+plt.title("Top 10 Countries by GDP per Capita (2022)")
+plt.xlabel("Country")
+plt.ylabel("GDP per capita (current US$)")
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.show()
