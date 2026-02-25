@@ -1,11 +1,11 @@
 # DATASCI 350 - Assignment 05 (Quarto)
 
 ## Repository
-- Repo URL: <PASTE_GITHUB_REPO_URL_HERE>
+- Repo URL: <https://github.com/hannaflorence2/Florence-Hanna-DATASCI-350-assignment-05>
 
 ## Published outputs
-- HTML Report: <PASTE_REPORT_GITHUB_PAGES_URL_HERE>
-- RevealJS Slides: <PASTE_SLIDES_GITHUB_PAGES_URL_HERE>
+- HTML Report: <https://hannaflorence2.github.io/Florence-Hanna-DATASCI-350-assignment-05/report.html>
+- RevealJS Slides: <https://hannaflorence2.github.io/Florence-Hanna-DATASCI-350-assignment-05/slides.html>
 
 ## Files included
 - `report.qmd` (Quarto report source)
